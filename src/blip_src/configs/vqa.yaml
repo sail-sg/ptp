@@ -1,0 +1,25 @@
+vqa_root: '/dataset/coco2014/COCO2014' #followed by train2014/
+vg_root: '/dataset/VisualGenome/'  #followed by image/
+train_files: ['vqa_train','vqa_val','vg_qa']
+ann_root: 'annotation'
+
+# set pretrained as a file path or an url
+
+pretrained: 'output/Pretrain_concated_pred_4M/checkpoint_19.pth'
+# size of vit model; base or large
+vit: 'base'
+batch_size_train: 12  # 16
+batch_size_test: 24  # 32
+vit_grad_ckpt: False
+vit_ckpt_layer: 0
+init_lr: 2e-5
+
+image_size: 480
+
+k_test: 128
+inference: 'rank'
+
+# optimizer
+weight_decay: 0.05
+min_lr: 0
+max_epoch: 10

@@ -1,15 +1,15 @@
 # Getting Started with PTP
 
-## Pre-trained a model from VIT initialization
+## PTP-BLIP
 
-### Download VIT-Base Model.
+### 1. Download VIT-Base Model.
 
 ```bash
 mkdir pretrained_models && cd pretrained_models;
 wget -c https://dl.fbaipublicfiles.com/deit/deit_base_patch16_224-b5f2ef4d.pth;
 ```
 
-### Pre-train
+### 2. Pre-train
 
 ```bash
 python move_pretrained_weights.py;
@@ -21,10 +21,13 @@ echo "output dir is: output/Pretrain_concated_pred_4M"
 
 ```
 
-## Downstream Task Evaluation
-After pre-trained, replace the **pretrained:** in yaml of each task with pre-trained model or downloaded model.
+Alternatively, download our pretrained model from [MODEL_ZOO.md](MODEL_ZOO.md).
 
-### Captioning
+### 3. Downstream Task Evaluation
+After pre-trained, replace the **pretrained:** in yaml of each task with pre-trained model or downloaded model.
+Then we provide run scripts for these tasks:
+
+#### Captioning
 
 ```bash
 # image captioning
@@ -44,7 +47,7 @@ python -m torch.distributed.launch --nproc_per_node=$1 --master_port=$(rand 2000
 --output_dir output/captioning_coco
 ```
 
-### Retrieval
+#### Retrieval
 
 ```bash
 function rand(){
@@ -73,7 +76,7 @@ python -m torch.distributed.launch --nproc_per_node=$1  --master_port=$(rand 200
 
 ```
 
-### VQA
+#### VQA
 
 
 ```bash
@@ -97,7 +100,7 @@ train_vqa.py --config ./configs/vqa.yaml \
 After generate result files, submitted in [eval_ai](https://eval.ai/web/challenges/challenge-page/830) for final results.
 
 
-### NLVR
+#### NLVR
 
 ```bash
 # NLVR2
@@ -117,12 +120,14 @@ python -m torch.distributed.launch --nproc_per_node=$1 --master_port=$(rand 2000
 ```
 
 
-## Run All Downstream Task At Once
+#### Run All Downstream Task At Once
 We also provide a shell script for all downstream task as below:
 
 ```bash
 bash multiple_scripts/multiple_exp_all_single_8u_ft.sh Pretrain_concated_pred_4M
 ```
+
+where _Pretrain_concated_pred_4M_ is the pretrained output directory.
 
 The
 ```bash
@@ -136,16 +141,37 @@ PRETRAINED_MODEL="output\/$1\/checkpoint_19.pth"
 
 echo "${suffix}";
 
-bash multiple_scripts/ft/exp_6.sh $gpu_num $suffix $PRETRAINED_MODEL; # flickr30 retrieval
+bash multiple_scripts/ft/exp_2.sh $gpu_num $suffix $PRETRAINED_MODEL; # captioning, ~1h
 
-bash multiple_scripts/ft/exp_2.sh $gpu_num $suffix $PRETRAINED_MODEL; # captioning 
+bash multiple_scripts/ft/exp_5.sh $gpu_num $suffix $PRETRAINED_MODEL; # flickr30 retrieval, ~1h
 
-bash multiple_scripts/ft/exp_1.sh $gpu_num $suffix $PRETRAINED_MODEL; # coco retrieval
+bash multiple_scripts/ft/exp_4.sh $gpu_num $suffix $PRETRAINED_MODEL; # NLVR2, ~2h
 
-bash multiple_scripts/ft/exp_4.sh $gpu_num $suffix $PRETRAINED_MODEL; # zero-shot video-text retrieval
+bash multiple_scripts/ft/exp_1.sh $gpu_num $suffix $PRETRAINED_MODEL; # coco retrieval, ~12h
 
-bash multiple_scripts/ft/exp_5.sh $gpu_num $suffix $PRETRAINED_MODEL; # NLVR2
+bash multiple_scripts/ft/exp_3.sh $gpu_num $suffix $PRETRAINED_MODEL; # vqa, very slow, ~35 h
 
-bash multiple_scripts/ft/exp_3.sh $gpu_num $suffix $PRETRAINED_MODEL; # vqa, very slow, around 35 h
+
+```
+
+**Tip**
+The simplest way to evaluate model on all tasks is:
+```bash
+bash multiple_scripts/multiple_exp_all_single_8u_ft.sh
+```
+
+
+## PTP-ViLT
+
+### 1. Pre-train
+```bash
+python run.py with data_root=/dataset num_gpus=8 num_nodes=1 task_mlm_itm whole_word_masking=True step200k per_gpu_batchsize=64
+```
+
+### 2. Downstream Tasks Evaluation
+
+#### vqa
+```bash
+python run.py with data_root=/dataset num_gpus=8 num_nodes=1 per_gpu_batchsize=64 task_finetune_vqa_randaug test_only=True precision=32 load_path="weights/vilt_vqa.ckpt"
 
 ```

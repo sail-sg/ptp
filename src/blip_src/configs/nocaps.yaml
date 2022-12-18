@@ -1,0 +1,14 @@
+image_root: '/dataset/nocaps/'
+ann_root: 'annotation'
+
+# set pretrained as a file path or an url
+pretrained: 'output/Pretrain_concated_pred_4M/checkpoint_19.pth'
+vit: 'base'
+batch_size: 32
+
+image_size: 384
+
+max_length: 20
+min_length: 5
+num_beams: 3
+prompt: 'a picture of '

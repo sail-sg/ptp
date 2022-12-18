@@ -1,0 +1,20 @@
+image_root: '/dataset/NLVR2' 
+ann_root: 'annotation'
+
+pretrained: 'output/Pretrain_concated_pred_4M/checkpoint_19.pth'
+
+#size of vit model; base or large
+vit: 'base'
+batch_size_train: 16 
+batch_size_test: 64 
+vit_grad_ckpt: False
+vit_ckpt_layer: 0
+max_epoch: 15
+
+image_size: 384
+
+# optimizer
+weight_decay: 0.05
+init_lr: 3e-5
+min_lr: 0
+
