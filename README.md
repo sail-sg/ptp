@@ -12,19 +12,25 @@ This repository includes implementations of the following method:
 
 ## Introduction
 The goal of Position-guided Text Prompt (PTP) is to bring position information into conventional Vision-Language Pre-training (VLP) models, as current mainstream e2e VLP models ignore this important cues.
-_Our method provide a good altentive for existing object feature based methods (BUTD and the following works)._
 
-**Position information is missed in a well-trained ViLT models (B).**
+
+<p align="center">
+  <img src="imgs/motivation-2.png" />
+</p>
+
+**Position information is missed in a well-trained ViLT models.**
+
 <!-- ![motivation](imgs/main.jpg) -->
 <p align="center">
   <img src="imgs/main.jpg" />
 </p>
 
+**Our method provide a good altentive for existing object feature based methods (BUTD and the following works).**
 
 ## Updates
 
 - We have put the pretrained and fine-tuned weight on huggingface for fast download.
-- The first version of downstream evaluation code based on BLIP is released! The pre-training code and evaluation code based on ViLT is in cleaning up now.
+- The first version of downstream evaluation code based on BLIP and pretrained/down-stream weight is released! The pre-training code and evaluation code based on ViLT is in cleaning up now.
 
 
 
