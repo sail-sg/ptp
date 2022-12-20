@@ -3,9 +3,9 @@
 
 ## 1. Pre-trained Model
 
-| Method | Vision Encoder  | #Images | Dataset   | Training Logs | Pretrained Weights     |
+| Method | Vision Encoder  | #Images | Dataset   | Pretrained Weights |    Training Logs  |
 | :---   | :--- | :--- | :---   |    :----:   |          :---: |
-| PTP-BLIP| ViT-B(DeiT) | 4M   | CC3M+COCO+VG+SBU | [link](https://huggingface.co/sail/PTP/blob/main/4M_pretrain.txt)      | [link](https://huggingface.co/sail/PTP/blob/main/Pretrain_concated_pred_4m.pth)  |
+| PTP-BLIP| ViT-B(DeiT) | 4M   | CC3M+COCO+VG+SBU | [link](https://huggingface.co/sail/PTP/blob/main/Pretrain_concated_pred_4m.pth)      | [link](https://huggingface.co/sail/PTP/blob/main/4M_pretrain.txt)  |
 
 ## 2. Downstream Model
 
@@ -45,13 +45,14 @@ Tip: Please use as large batch size as possible, we experimentally find that the
 #### 2.3.2 Flickr30K
 | Method |I2T@1 | T2I@1 | Model Weight  | Training Logs | Config    |
 | :---   | :---   | :---  |  :---   | :---  |          :---: |
-| PTP-BLIP|  96.1 | 84.2 | [link]()      | [link](https://huggingface.co/sail/PTP/blob/main/4M_ptp_flickr30k_ft.txt)      | configs/retrieval_flickr.yaml  |
+| PTP-BLIP|  96.1 | 84.2 | [link](https://huggingface.co/sail/PTP/blob/main/flickr30k_ft_4m.pth)      | [link](https://huggingface.co/sail/PTP/blob/main/4M_ptp_flickr30k_ft.txt)      | configs/retrieval_flickr.yaml  |
+
 
 ### 2.4 VQA V2
 
 | Method | Test-dev|Test-std |Model Weight  | Training Logs | Config    |
 | :---   |  :---   | :---  | :---   | :---  |  :---: |
-| PTP-BLIP| 76.02 | 76.18 | [link]()      | [link](https://huggingface.co/sail/PTP/blob/main/4M_ptp_vqa_v2.txt)      | configs/vqa.yaml  |
+| PTP-BLIP| 76.02 | 76.18 | [link](https://huggingface.co/sail/PTP/blob/main/vqa_ft_4m.pth)      | [link](https://huggingface.co/sail/PTP/blob/main/4M_ptp_vqa_v2.txt)      | configs/vqa.yaml  |
 
 ### 2.5 NLVR
 

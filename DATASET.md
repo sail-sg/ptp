@@ -9,7 +9,7 @@ __As the data prepartion is very time consuming, we provide our experience for r
 Step1: First download train/val/test annotation files include URL from [google-research-datasets](https://github.com/rom1504/img2dataset/blob/main/dataset_examples/cc3m.md).
 
 Step2: We provided our script for downloading and split CC3M into subsplit in [cc3m_download.py](https://huggingface.co/sail/PTP/blob/main/download_cc3m.py).
-**It's better to use our cript as the filename maybe different with different pretrained method.**
+**It's better to use our cript for downloading as the filename maybe different with different preprocess.**
 
 Notice we only download 2.8M data as some URLs has invalid.
 
@@ -33,7 +33,7 @@ mv VG_100K_2/* image/
 ### COCO
 
 Down image (coco2014) from [coco](https://cocodataset.org/#download).
-Download 2014 Train/val and 2015 Test images.
+Download 2014 Train, 2014 val and 2015 Test images.
 
 ### CC12M
 Step1: Download annotation files include URLs from [google-research-datasets](https://github.com/google-research-datasets/conceptual-12m).
@@ -46,7 +46,7 @@ Notice we only download 10M data as some URLs has invalid.
 
 ### COCO
 Down image (coco2014) from [coco](https://cocodataset.org/#download).
-Download 2014 Train/val/test and 2015 Test images.
+Download 2014 Train, 2014 val, 2014 test and 2015 Test images.
 
 
 ### Flickr30K
@@ -57,7 +57,7 @@ Download image from [kaggle](https://www.kaggle.com/datasets/hsankesara/flickr-i
 Download images from [VQA](https://visualqa.org/download.html).
 
 ### NLVR
-Download images from [NLVR](https://lil.nlp.cornell.edu/nlvr/)
+Download images from [NLVR](https://lil.nlp.cornell.edu/nlvr/).
 
 ## Originze Datasets
 

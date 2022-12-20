@@ -1,0 +1,6 @@
+opencv-python
+ruamel_yaml
+pycocoevalcap
+transformers
+timm
+tabulate
