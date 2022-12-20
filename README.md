@@ -15,7 +15,7 @@ The goal of Position-guided Text Prompt (PTP) is to bring position information i
 
 
 <p align="center">
-  <img src="imgs/motivation.jpg" />
+  <img src="imgs/motivation.jpg" width = "500" />
 </p>
 
 We observe **Position information is missed in a well-trained ViLT models.**
