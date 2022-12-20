@@ -47,7 +47,6 @@ Tip: Please use as large batch size as possible, we experimentally find that the
 | :---   | :---   | :---  |  :---   | :---  |          :---: |
 | PTP-BLIP|  96.1 | 84.2 | [link](https://huggingface.co/sail/PTP/blob/main/flickr30k_ft_4m.pth)      | [link](https://huggingface.co/sail/PTP/blob/main/4M_ptp_flickr30k_ft.txt)      | configs/retrieval_flickr.yaml  |
 
-
 ### 2.4 VQA V2
 
 | Method | Test-dev|Test-std |Model Weight  | Training Logs | Config    |

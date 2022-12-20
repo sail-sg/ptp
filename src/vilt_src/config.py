@@ -111,7 +111,6 @@ def task_mlm_itm_randaug():
     max_epoch = 10
     max_image_len = 200
 
-
 @ex.named_config
 def task_mlm_itm_mpp():
     exp_name = "mlm_itm_mpp"

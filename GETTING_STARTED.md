@@ -10,7 +10,6 @@ mkdir pretrained_models && cd pretrained_models;
 wget -c https://dl.fbaipublicfiles.com/deit/deit_base_patch16_224-b5f2ef4d.pth;
 ```
 
-
 ### 2. Pre-train
 
 ```bash
