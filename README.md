@@ -39,7 +39,7 @@ We observe **Position information is missed in a well-trained ViLT models.**
 ## Updates
 
 - We have put the pretrained and fine-tuned weight on huggingface for fast download.
-- The first version of downstream evaluation code based on BLIP and pretrained/down-stream weight is released! The pre-training code and evaluation code based on ViLT is in cleaning up now.
+- The first version of downstream evaluation code based on BLIP and pretrained/down-stream weight is released! The pre-training code is in cleaning up now.
 
 
 
