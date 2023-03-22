@@ -86,9 +86,26 @@ Use soft link to map directory, for example
 ln -s [PATH_TO_COCO2014] Dataset/coco2014/COCO2014
 ```
 
-## 2. Download Corpus (image-text pair)
-We provide three kinds of shuffled image-text pair. We use object information from [OSCAR](https://github.com/microsoft/Oscar/blob/master/VinVL_DOWNLOAD.md) and follow [BLIP](https://github.com/salesforce/BLIP) for caption clean.
+## 2. Download/Prepare Corpus (image-text pair)
+We provide two kinds of shuffled image-text pair. We use object information from [OSCAR](https://github.com/microsoft/Oscar/blob/master/VinVL_DOWNLOAD.md) and follow [BLIP](https://github.com/salesforce/BLIP) for caption refine.
+1. Specifically, we download corups and object features from OSCAR codebase first. Follow [download_cc3m_predictions.sh](src/data_preprocess/download_cc3m_predictions.sh) for details. Download COCOTrain, CC Train, SBU (all) and VG.
+2. Then Generate object_bbox and object_classes from object feature. Follow [generate_sample_with_bbox_and_classes.py](src/data_preprocess/generate_sample_with_bbox_and_classes.py) for details.
+3. At last, use generated caption to padding with origing caption, follow BLIP.
 
-- 3M Image: [CC3M]()
-- 4M Image: [CC3M+COCO+VG+SBU]()
-- 14M Image: [CC12M+CC3M+COCO+VG+SBU]()
+**Notice each COCO image include 5 text in [oscar corpus](https://biglmdiag.blob.core.windows.net/vinvl/pretrain_corpus/coco_flickr30k_gqa.tsv). As COCO is high-quality caption, it will affect the final downstream result much.**
+
+Make sure each line in corpus is
+```
+[image, refined_caption, object_bbox, object_classes]
+```
+A example is given below:
+
+```bash
+CC3M/images/train/1597/3250687125.jpg   i shall be bringing this white chair and table to the shoot; a white table with two white chairs and a couch    [[340, 226, 417, 323], [16, 364, 348, 810], [256, 206, 380, 325], [195, 322, 627, 899], [0, 0, 192, 288], [568, 198, 730, 335], [95, 107, 202, 141], [531, 0, 732, 191], [666, 244, 734, 369], [378, 208, 677, 341]] ['pillow', 'chair', 'pillow', 'table', 'window', 'pillow', 'box', 'window', 'pillow', 'pillow']
+```
+
+- 2.8M Image (2G): [CC3M](https://drive.google.com/file/d/1iO-d5e7mOvWEreDrlNyEc_RU_gP7FNBk/view?usp=sharing)
+- 4M Image (2.8G): [CC3M+COCO+VG+SBU](https://drive.google.com/file/d/15lW9rSxUKJQUupEJBL6rKsoHPfdDG6fj/view?usp=sharing)
+<!-- - 14M Image: [CC12M+CC3M+COCO+VG+SBU]() -->
+
+As we used all spaces for huggingface and google driver now, follow mentonied way to prepare more large corpus.
