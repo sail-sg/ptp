@@ -4,3 +4,4 @@ pycocoevalcap
 transformers
 timm
 tabulate
+numpy
