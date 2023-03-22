@@ -36,9 +36,9 @@ We observe **Position information is missed in a well-trained ViLT models.**
 
 **Our method provide a good altentive for existing object feature based methods (BUTD and the following works).**
 
-An example of one _PTP_ is show below:
+Some examples of one _PTP_ is show below:
 <p align="center">
-  <img src="imgs/983.jpg" />
+  <img src="imgs/block_mask.png" />
 </p>
 
 ## Updates

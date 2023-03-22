@@ -1,7 +1,7 @@
 # MODEL ZOO
 
 
-## 1. Pre-trained Model
+## 1. Pre-trained Models
 
 | Method | Vision Encoder  | #Images | Dataset   | Pretrained Weights |    Training Logs  |
 | :---   | :--- | :--- | :---   |    :----:   |          :---: |

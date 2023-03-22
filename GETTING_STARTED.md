@@ -1,8 +1,8 @@
-# Getting Started with PTP
+# Getting Started with PTP Model
 
 ## PTP-BLIP
 
-### 1. Download VIT-Base Model.
+### 1. Download VIT-Base Models.
 
 ```bash
 cd ptp/src/blip_src

@@ -1,4 +1,4 @@
-## Install PyTorch and the other dependencies
+## Install PyTorch and the other dependencies for PTP
 
 The code has been test on '1.9.0+cu102' and python3.8.
 
