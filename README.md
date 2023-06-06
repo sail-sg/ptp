@@ -151,7 +151,7 @@ If you have any questions, please email me or open an new issue.
 If you find our work helps, please use the following BibTeX entry for citation.
 
 ```
-@article{wang2022ptp,
+@article{wang2023ptp,
   title={Position-guided Text Prompt for Vision Language Pre-training},
   author={Wang, Alex Jinpeng and Zhou, Pan and Shou, Mike Zheng and Yan, Shui Cheng},
   journal={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},

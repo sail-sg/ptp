@@ -105,7 +105,9 @@ CC3M/images/train/1597/3250687125.jpg   i shall be bringing this white chair and
 ```
 
 - 2.8M Image (2G): [CC3M](https://drive.google.com/file/d/1iO-d5e7mOvWEreDrlNyEc_RU_gP7FNBk/view?usp=sharing)
-- 4M Image (2.8G): [CC3M+COCO+VG+SBU](https://drive.google.com/file/d/15lW9rSxUKJQUupEJBL6rKsoHPfdDG6fj/view?usp=sharing)
-<!-- - 14M Image: [CC12M+CC3M+COCO+VG+SBU]() -->
+
+Thanks for Jaeseok Byun for pointing out this file is for data compress. The correct file path is:
+
+- 4M Image (2.8G): [CC3M+COCO+VG+SBU]()
 
 As we used all spaces for huggingface and google driver now, follow mentonied way to prepare more large corpus.
