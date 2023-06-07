@@ -3,6 +3,9 @@
 [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/position-guided-text-prompt-for-vision/zero-shot-cross-modal-retrieval-on-coco-2014)](
 https://paperswithcode.com/sota/zero-shot-cross-modal-retrieval-on-coco-2014?p=position-guided-text-prompt-for-vision)
 
+
+https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/sota/zero-shot-cross-modal-retrieval-on-coco-2014metric=Text-to-image%20R%401?p=position-guided-text-prompt-for-vision
+
 [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/position-guided-text-prompt-for-vision/cross-modal-retrieval-on-coco-2014)](
 https://paperswithcode.com/sota/cross-modal-retrieval-on-coco-2014?p=position-guided-text-prompt-for-vision)
 
@@ -43,6 +46,7 @@ Some examples of one _PTP_ is show below:
 
 ## Updates
 
+- 2023.5 Modify the pre-training corpus to prevent confusing.
 - 2023.3 The Pre-training Code is released.
 - 2023.1 We have put the pretrained and fine-tuned weight on huggingface for fast download.
 - 2022.12 The first version of downstream evaluation code based on BLIP and pretrained/down-stream weight is released! The pre-training code is in cleaning up now.
@@ -71,18 +75,18 @@ Considering the dataset prepartion is very time consuming, we provide detail gui
 
 
 #### 2.1 Captioning
-| Task | B@4 | CIDEr | Model Weight  | Training Logs | Config    |
-| :---   |  :---   | :---  |          ---: | ---: | :---: |
-| PTP-BLIP| 42.5 | 145.2 | [link](https://huggingface.co/sail/PTP/blob/main/coco_captioning_checkpoint_best.pth)      | [link](https://huggingface.co/sail/PTP/blob/main/4M_ptp_coco_captioning.txt)      | configs/caption_coco.yaml |
+| Method | B@4 | CIDEr | | Config    |
+| :---   |  :---   | :---  |    ---: |
+| PTP-BLIP| 40.1 | 135.0    | configs/caption_coco.yaml |
 
 
 #### 2.2 Zero-shot Retrieval
 
-##### 2.2.1 COCO
+<!-- ##### 2.2.1 COCO
 | Task | I2T@1 | T2I@1 | Model Weight  | Training Logs | Config    |
 | :---   |  :---   | :---  | :---   | :---  |          :---: |
 | Zero-shot Retrieval(COCO)| 72.3 | 49.5 | [link](https://huggingface.co/sail/PTP/blob/main/zero_shot_coco_checkpoint_4m.pth)      | [link](https://huggingface.co/sail/PTP/blob/main/4M_ptp_coco_zero_shot.txt)      | configs/retrieval_coco.yaml  |
-
+ -->
 
 ##### 2.2.2 Flickr30K
 
@@ -97,9 +101,9 @@ Tip: Please use as large batch size as possible, we experimentally find that the
 
 
 ##### 2.3.1 COCO
-| Method |I2T@1 | T2I@1 | Model Weight  | Training Logs | Config    |
-| :---   |  :---   | :---  |     :---   | :---  |        :---: |
-| PTP-BLIP| 83.1 | 67.3 | [link](https://huggingface.co/sail/PTP/blob/main/coco_retrieval_ft_4m.pth)      | [link](https://huggingface.co/sail/PTP/blob/main/4M_ptp_coco_ft.txt)      | configs/retrieval_coco.yaml  |
+| Method |I2T@1 | T2I@1 |  | Config    |
+| :---   |  :---   | :---  |      :---: |
+| PTP-BLIP| 77.6 | 59.4    | configs/retrieval_coco.yaml  |
 
 
 ##### 2.3.2 Flickr30K
@@ -151,10 +155,10 @@ If you have any questions, please email me or open an new issue.
 If you find our work helps, please use the following BibTeX entry for citation.
 
 ```
-@article{wang2023ptp,
+@article{wang2022ptp,
   title={Position-guided Text Prompt for Vision Language Pre-training},
   author={Wang, Alex Jinpeng and Zhou, Pan and Shou, Mike Zheng and Yan, Shui Cheng},
-  journal={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
-  year={2023}
+  journal={https://arxiv.org/abs/2212.09737},
+  year={2022}
 }
 ```

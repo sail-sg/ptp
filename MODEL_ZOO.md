@@ -11,17 +11,17 @@
 
 
 ### 2.1 Captioning
-| Method | B@4 | CIDEr | Model Weight  | Training Logs | Config    |
-| :---   |  :---   | :---  |          ---: | ---: | :---: |
-| PTP-BLIP| 42.5 | 145.2 | [link](https://huggingface.co/sail/PTP/blob/main/coco_captioning_checkpoint_best.pth)      | [link](https://huggingface.co/sail/PTP/blob/main/4M_ptp_coco_captioning.txt)      | configs/caption_coco.yaml |
+| Method | B@4 | CIDEr | | Config    |
+| :---   |  :---   | :---  |    ---: |
+| PTP-BLIP| 40.1 | 135.0    | configs/caption_coco.yaml |
 
 
 ### 2.2 Zero-shot Retrieval
 
-#### 2.2.1 COCO
+<!-- #### 2.2.1 COCO
 | Method | I2T@1 | T2I@1 | Model Weight  | Training Logs | Config    |
 | :---   |  :---   | :---  | :---   | :---  |          :---: |
-| PTP-BLIP| 72.3 | 49.5 | [link](https://huggingface.co/sail/PTP/blob/main/zero_shot_coco_checkpoint_4m.pth)      | [link](https://huggingface.co/sail/PTP/blob/main/4M_ptp_coco_zero_shot.txt)      | configs/retrieval_coco.yaml  |
+| PTP-BLIP| 72.3 | 49.5 | [link](https://huggingface.co/sail/PTP/blob/main/zero_shot_coco_checkpoint_4m.pth)      | [link](https://huggingface.co/sail/PTP/blob/main/4M_ptp_coco_zero_shot.txt)      | configs/retrieval_coco.yaml  | -->
 
 
 #### 2.2.2 Flickr30K
@@ -37,9 +37,9 @@ Tip: Please use as large batch size as possible, we experimentally find that the
 
 
 #### 2.3.1 COCO
-| Method |I2T@1 | T2I@1 | Model Weight  | Training Logs | Config    |
-| :---   |  :---   | :---  |     :---   | :---  |        :---: |
-| PTP-BLIP| 83.1 | 67.3 | [link](https://huggingface.co/sail/PTP/blob/main/coco_retrieval_ft_4m.pth)      | [link](https://huggingface.co/sail/PTP/blob/main/4M_ptp_coco_ft.txt)      | configs/retrieval_coco.yaml  |
+| Method |I2T@1 | T2I@1 | | Config    |
+| :---   |  :---   | :---  |        :---: |
+| PTP-BLIP| 77.6 | 59.4 | configs/retrieval_coco.yaml  |
 
 
 #### 2.3.2 Flickr30K
