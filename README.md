@@ -1,10 +1,12 @@
 # PTP
 
-[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/position-guided-text-prompt-for-vision/zero-shot-cross-modal-retrieval-on-coco-2014)](
-https://paperswithcode.com/sota/zero-shot-cross-modal-retrieval-on-coco-2014?p=position-guided-text-prompt-for-vision)
+<!-- [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/position-guided-text-prompt-for-vision/zero-shot-cross-modal-retrieval-on-coco-2014)](
+https://paperswithcode.com/sota/zero-shot-cross-modal-retrieval-on-coco-2014?metric=Text-to-image%20R%401)
+
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/image-classification-on-imagenet)](
+https://paperswithcode.com/sota/zero-shot-cross-modal-retrieval-on-coco-2014?metric=Text-to-image%20R%401) -->
 
 
-https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/sota/zero-shot-cross-modal-retrieval-on-coco-2014metric=Text-to-image%20R%401?p=position-guided-text-prompt-for-vision
 
 [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/position-guided-text-prompt-for-vision/cross-modal-retrieval-on-coco-2014)](
 https://paperswithcode.com/sota/cross-modal-retrieval-on-coco-2014?p=position-guided-text-prompt-for-vision)
@@ -75,7 +77,7 @@ Considering the dataset prepartion is very time consuming, we provide detail gui
 
 
 #### 2.1 Captioning
-| Method | B@4 | CIDEr | | Config    |
+| Method | B@4 | CIDEr | Config    |
 | :---   |  :---   | :---  |    ---: |
 | PTP-BLIP| 40.1 | 135.0    | configs/caption_coco.yaml |
 
@@ -101,7 +103,7 @@ Tip: Please use as large batch size as possible, we experimentally find that the
 
 
 ##### 2.3.1 COCO
-| Method |I2T@1 | T2I@1 |  | Config    |
+| Method |I2T@1 | T2I@1  | Config    |
 | :---   |  :---   | :---  |      :---: |
 | PTP-BLIP| 77.6 | 59.4    | configs/retrieval_coco.yaml  |
 
